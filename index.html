@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConDrone.cl | Servicios de Inspección Aérea con Drones | Chile</title>
+    <meta name="description" content="Inspección industrial con drones en Chile. Termografía, LiDAR, ultrasonido y más para minería, energía, agricultura y construcción. MCCO Copper.">
+    <meta name="keywords" content="drones industriales Chile, inspección con drones, termografía aérea, LiDAR Chile, inspección minería, ConDrone">
+    <meta name="author" content="MCCO Copper - ConDrone.cl">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="ConDrone.cl | Inspección Aérea con Drones">
+    <meta property="og:description" content="Servicios de inspección industrial con drones en Chile. Termografía, LiDAR, ultrasonido y más.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://condrone.cl">
+    <meta property="og:locale" content="es_CL">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i data-lucide="plane" class="logo-plane"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">ConDrone</span><span class="logo-domain">.cl</span>
+                </div>
+            </div>
+            <button class="btn-primary" onclick="scrollToContact()">Cotizar</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <img src="https://images.unsplash.com/photo-1578496479763-c21c718af028?w=800&q=80" alt="Industria" class="hero-image" id="heroImage">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-badge-container">
+                <div class="hero-icon" id="heroIcon">
+                    <i data-lucide="factory"></i>
+                </div>
+                <span class="hero-savings" id="heroSavings">Hasta 85% ahorro</span>
+            </div>
+            <h1 class="hero-title font-display" id="heroTitle">Minería</h1>
+            <p class="hero-tagline" id="heroTagline">Inspección sin detener operaciones</p>
+        </div>
+    </section>
+
+    <!-- Industry Selector -->
+    <section class="industry-selector">
+        <div class="container">
+            <div class="industry-buttons" id="industryButtons">
+                <!-- Industries will be rendered by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="services-title font-display" id="servicesTitle">
+                Servicios disponibles para Minería
+            </h2>
+            
+            <div class="services-grid" id="servicesGrid">
+                <!-- Services will be rendered by JavaScript -->
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-box" id="ctaBox">
+                <h3 class="cta-title font-display">
+                    ¿Necesitas una cotización para <span id="ctaIndustry">Minería</span>?
+                </h3>
+                <p class="cta-description">
+                    Te enviamos una propuesta técnico-económica en 24 horas
+                </p>
+                <button class="btn-primary btn-large" onclick="scrollToContact()">
+                    Solicitar Cotización <i data-lucide="arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="contact-title font-display">Contáctanos</h2>
+            <p class="contact-description">Cuéntanos sobre tu proyecto y te enviamos una propuesta personalizada</p>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="company">Empresa</label>
+                        <input type="text" id="company" name="company" placeholder="Nombre de tu empresa">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+56 9 XXXX XXXX">
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <label for="industry">Industria</label>
+                    <select id="industry" name="industry">
+                        <option value="">Selecciona una industria</option>
+                        <option value="mineria">Minería</option>
+                        <option value="energia">Energía</option>
+                        <option value="agricultura">Agricultura</option>
+                        <option value="construccion">Construcción</option>
+                        <option value="forestal">Forestal</option>
+                        <option value="telecom">Telecom</option>
+                        <option value="acuicultura">Acuicultura</option>
+                        <option value="seguros">Seguros</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label for="message">Cuéntanos sobre tu proyecto</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Describe brevemente qué necesitas inspeccionar..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary btn-large btn-full">
+                    Enviar Solicitud <i data-lucide="send"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <span>© 2025 ConDrone.cl</span>
+                <span class="footer-separator">•</span>
+                <span>Una empresa de <span class="text-salmon font-semibold">MCCO Copper</span></span>
+            </div>
+            <div class="footer-right">
+                <a href="mailto:contacto@condrone.cl">contacto@condrone.cl</a>
+                <a href="tel:+56900000000">+56 9 XXXX XXXX</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Service Detail Modal -->
+    <div class="modal-overlay" id="serviceModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="" alt="" class="modal-image" id="modalImage">
+                <div class="modal-gradient"></div>
+                <button class="modal-close" onclick="closeModal()">
+                    <i data-lucide="x"></i>
+                </button>
+                <div class="modal-header-content">
+                    <div class="modal-header-icon" id="modalIcon">
+                        <i data-lucide="radio"></i>
+                    </div>
+                    <div class="modal-header-text">
+                        <h3 class="modal-title font-display" id="modalTitle">Servicio</h3>
+                        <p class="modal-description" id="modalDesc">Descripción</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Sensor -->
+                <div class="sensor-box">
+                    <div class="sensor-icon">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <div class="sensor-info">
+                        <p class="sensor-label">Tecnología utilizada</p>
+                        <p class="sensor-value" id="modalSensor">Sensor info</p>
+                    </div>
+                </div>
+
+                <!-- Cases -->
+                <div class="modal-section">
+                    <h4 class="modal-section-title font-display">Casos de uso</h4>
+                    <div class="cases-grid" id="modalCases">
+                        <!-- Cases will be rendered by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Benefits -->
+                <div class="modal-section">
+                    <h4 class="modal-section-title font-display">Beneficios</h4>
+                    <div class="benefits-list" id="modalBenefits">
+                        <!-- Benefits will be rendered by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Savings -->
+                <div class="savings-box">
+                    <div class="savings-icon">
+                        <i data-lucide="trending-up"></i>
+                    </div>
+                    <div class="savings-info">
+                        <p class="savings-label">Ahorro estimado</p>
+                        <p class="savings-value" id="modalSavingsDetail">Savings detail</p>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <button class="btn-primary btn-full btn-large" onclick="closeModal(); scrollToContact();">
+                    Cotizar este servicio <i data-lucide="arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

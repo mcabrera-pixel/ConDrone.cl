@@ -1,0 +1,25 @@
+# ================================================
+# ROBOTS.TXT para ConDrone.cl
+# Guardar como: robots.txt en la raíz del sitio
+# ================================================
+
+User-agent: *
+Allow: /
+
+# Bloquear carpetas de administración
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /login/
+
+# Bloquear archivos temporales
+Disallow: /*.json$
+Disallow: /*.xml$
+
+# Permitir sitemap
+Allow: /sitemap.xml
+
+# Ubicación del sitemap
+Sitemap: https://condrone.cl/sitemap.xml
+
+# Crawl-delay recomendado
+Crawl-delay: 10
