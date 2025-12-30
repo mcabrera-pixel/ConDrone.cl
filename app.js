@@ -2,6 +2,70 @@
 // ConDrone.cl - Main Application
 // ===================================
 
+// Blog Posts Data
+const blogPosts = [
+  {
+    id: 1,
+    title: 'LiDAR vs Fotogrametría: ¿Cuál usar en cada proyecto?',
+    excerpt: 'Descubre cuándo usar LiDAR o Fotogrametría en tus proyectos. Comparativa técnica para minería, forestal y construcción.',
+    category: 'Tecnología',
+    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80',
+    date: '2025-01-15',
+    readTime: '8 min',
+    url: '/blog/lidar-vs-fotogrametria'
+  },
+  {
+    id: 2,
+    title: 'Medición de Espesores con Drones: Guía Completa UT',
+    excerpt: 'Cómo realizar inspecciones ultrasónicas aéreas en tanques, silos y chimeneas sin andamios ni detención de planta.',
+    category: 'Inspección',
+    image: 'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=600&q=80',
+    date: '2025-01-10',
+    readTime: '10 min',
+    url: '/blog/medicion-espesores-drones'
+  },
+  {
+    id: 3,
+    title: 'Normativa DGAC para Drones en Chile 2025',
+    excerpt: 'Todo lo que necesitas saber sobre la regulación de drones comerciales en Chile según la Dirección General de Aeronáutica Civil.',
+    category: 'Normativa',
+    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80',
+    date: '2025-01-05',
+    readTime: '12 min',
+    url: '/blog/normativa-dgac-drones-chile'
+  },
+  {
+    id: 4,
+    title: 'Termografía en Paneles Solares: Detecta Hotspots',
+    excerpt: 'Aprende cómo la termografía infrarroja puede detectar fallas en paneles solares antes de que afecten la generación.',
+    category: 'Energía',
+    image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80',
+    date: '2024-12-28',
+    readTime: '7 min',
+    url: '/blog/termografia-paneles-solares'
+  },
+  {
+    id: 5,
+    title: 'Gemelos Digitales Industriales con Drones',
+    excerpt: 'Cómo crear modelos 3D precisos de tus instalaciones para optimización y planificación de proyectos.',
+    category: 'Industria 4.0',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+    date: '2024-12-20',
+    readTime: '9 min',
+    url: '/blog/gemelos-digitales-industriales'
+  },
+  {
+    id: 6,
+    title: 'Fumigación con Drones vs Tradicional',
+    excerpt: 'Análisis comparativo de costos, eficiencia y resultados entre fumigación aérea con drones y métodos tradicionales.',
+    category: 'Agricultura',
+    image: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&q=80',
+    date: '2024-12-15',
+    readTime: '6 min',
+    url: '/blog/fumigacion-drones-vs-tradicional'
+  }
+];
+
 // Industries Data (translated from React component)
 const industries = [
   {
@@ -463,6 +527,7 @@ const industries = [
 // State
 let activeIndustry = industries[0];
 let selectedService = null;
+let mobileMenuOpen = false;
 
 // DOM Elements
 const heroImage = document.getElementById('heroImage');
@@ -475,30 +540,220 @@ const servicesTitle = document.getElementById('servicesTitle');
 const servicesGrid = document.getElementById('servicesGrid');
 const ctaIndustry = document.getElementById('ctaIndustry');
 const serviceModal = document.getElementById('serviceModal');
+const menuToggle = document.getElementById('menuToggle');
+const navMobile = document.getElementById('navMobile');
+const scrollTopBtn = document.getElementById('scrollTop');
+const loadingOverlay = document.getElementById('loadingOverlay');
+const blogGrid = document.getElementById('blogGrid');
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
+    // Hide loading overlay
+    setTimeout(() => {
+        loadingOverlay.classList.add('hidden');
+    }, 500);
+
     renderIndustryButtons();
     updateDisplay();
+    renderBlogPosts();
     lucide.createIcons();
-    
+
+    // Mobile menu toggle
+    menuToggle.addEventListener('click', toggleMobileMenu);
+
     // Close modal on overlay click
     serviceModal.addEventListener('click', (e) => {
         if (e.target === serviceModal) {
             closeModal();
         }
     });
-    
+
     // Close modal on escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             closeModal();
+            closeMobileMenu();
         }
     });
-    
-    // Form submission
+
+    // Scroll to top button visibility
+    window.addEventListener('scroll', handleScroll);
+
+    // Scroll to top click
+    scrollTopBtn.addEventListener('click', scrollToTop);
+
+    // Form submission with validation
     document.getElementById('contactForm').addEventListener('submit', handleFormSubmit);
+
+    // Real-time form validation
+    setupFormValidation();
 });
+
+// Mobile Menu Functions
+function toggleMobileMenu() {
+    mobileMenuOpen = !mobileMenuOpen;
+    navMobile.classList.toggle('active', mobileMenuOpen);
+
+    // Update icon
+    const menuIcon = document.getElementById('menuIcon');
+    menuIcon.setAttribute('data-lucide', mobileMenuOpen ? 'x' : 'menu');
+    lucide.createIcons();
+}
+
+function closeMobileMenu() {
+    mobileMenuOpen = false;
+    navMobile.classList.remove('active');
+
+    const menuIcon = document.getElementById('menuIcon');
+    menuIcon.setAttribute('data-lucide', 'menu');
+    lucide.createIcons();
+}
+
+// Scroll Functions
+function handleScroll() {
+    const scrollY = window.scrollY;
+
+    // Show/hide scroll to top button
+    if (scrollY > 400) {
+        scrollTopBtn.classList.add('visible');
+    } else {
+        scrollTopBtn.classList.remove('visible');
+    }
+}
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Blog Posts Rendering
+function renderBlogPosts() {
+    if (!blogGrid) return;
+
+    blogGrid.innerHTML = blogPosts.map(post => `
+        <article class="blog-card" onclick="openBlogPost('${post.url}')">
+            <div class="blog-card-image">
+                <img src="${post.image}" alt="${post.title}" loading="lazy">
+                <span class="blog-card-category">${post.category}</span>
+            </div>
+            <div class="blog-card-content">
+                <h3 class="blog-card-title font-display">${post.title}</h3>
+                <p class="blog-card-excerpt">${post.excerpt}</p>
+                <div class="blog-card-footer">
+                    <div class="blog-card-meta">
+                        <i data-lucide="clock"></i>
+                        ${post.readTime}
+                    </div>
+                    <span class="blog-card-link">
+                        Leer más <i data-lucide="arrow-right"></i>
+                    </span>
+                </div>
+            </div>
+        </article>
+    `).join('');
+}
+
+function openBlogPost(url) {
+    // For now, show a toast - in production this would navigate to the blog post
+    showToast('Próximamente: Blog completo disponible', 'info');
+}
+
+// Toast Notification
+function showToast(message, type = 'success') {
+    // Remove existing toast
+    const existingToast = document.querySelector('.toast');
+    if (existingToast) {
+        existingToast.remove();
+    }
+
+    // Create toast
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    // Show toast
+    setTimeout(() => {
+        toast.classList.add('visible');
+    }, 10);
+
+    // Hide toast after 3 seconds
+    setTimeout(() => {
+        toast.classList.remove('visible');
+        setTimeout(() => toast.remove(), 300);
+    }, 3000);
+}
+
+// Form Validation
+function setupFormValidation() {
+    const form = document.getElementById('contactForm');
+    const inputs = form.querySelectorAll('input, select, textarea');
+
+    inputs.forEach(input => {
+        input.addEventListener('blur', () => validateField(input));
+        input.addEventListener('input', () => {
+            if (input.classList.contains('error')) {
+                validateField(input);
+            }
+        });
+    });
+}
+
+function validateField(field) {
+    const value = field.value.trim();
+    let isValid = true;
+    let errorMessage = '';
+
+    // Remove existing error
+    const existingError = field.parentNode.querySelector('.form-error');
+    if (existingError) {
+        existingError.remove();
+    }
+
+    // Validation rules
+    if (field.required && !value) {
+        isValid = false;
+        errorMessage = 'Este campo es requerido';
+    } else if (field.type === 'email' && value) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value)) {
+            isValid = false;
+            errorMessage = 'Ingresa un email válido';
+        }
+    } else if (field.type === 'tel' && value) {
+        const phoneRegex = /^[\d\s+()-]{8,}$/;
+        if (!phoneRegex.test(value)) {
+            isValid = false;
+            errorMessage = 'Ingresa un teléfono válido';
+        }
+    }
+
+    // Update field state
+    field.classList.remove('error', 'success');
+    if (!isValid) {
+        field.classList.add('error');
+        const errorEl = document.createElement('span');
+        errorEl.className = 'form-error';
+        errorEl.textContent = errorMessage;
+        field.parentNode.appendChild(errorEl);
+    } else if (value) {
+        field.classList.add('success');
+    }
+
+    return isValid;
+}
+
+function validateForm(form) {
+    const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+    let isValid = true;
+
+    inputs.forEach(input => {
+        if (!validateField(input)) {
+            isValid = false;
+        }
+    });
+
+    return isValid;
+}
 
 // Render industry buttons
 function renderIndustryButtons() {
@@ -633,14 +888,40 @@ function scrollToContact() {
 // Handle form submission
 function handleFormSubmit(e) {
     e.preventDefault();
-    
+
+    // Validate form
+    if (!validateForm(e.target)) {
+        showToast('Por favor completa los campos requeridos', 'error');
+        return;
+    }
+
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
-    
-    // Here you would typically send the data to a server
-    console.log('Form submitted:', data);
-    
-    // Show success message
-    alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
-    e.target.reset();
+
+    // Show loading state on button
+    const submitBtn = e.target.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<span class="loading-spinner" style="width:1.25rem;height:1.25rem;border-width:2px;display:inline-block;"></span> Enviando...';
+    submitBtn.disabled = true;
+
+    // Simulate sending (in production this would be an actual API call)
+    setTimeout(() => {
+        console.log('Form submitted:', data);
+
+        // Reset button
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+
+        // Show success message
+        showToast('¡Gracias! Te contactaremos en menos de 24 horas.', 'success');
+
+        // Reset form
+        e.target.reset();
+
+        // Remove success classes
+        e.target.querySelectorAll('.success').forEach(el => el.classList.remove('success'));
+
+        // Re-initialize icons
+        lucide.createIcons();
+    }, 1500);
 }

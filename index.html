@@ -37,8 +37,24 @@
                     <span class="logo-name">ConDrone</span><span class="logo-domain">.cl</span>
                 </div>
             </div>
+            <nav class="nav-desktop" id="navDesktop">
+                <a href="#hero" class="nav-link">Inicio</a>
+                <a href="#services" class="nav-link">Servicios</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Contacto</a>
+            </nav>
             <button class="btn-primary" onclick="scrollToContact()">Cotizar</button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <i data-lucide="menu" id="menuIcon"></i>
+            </button>
         </div>
+        <!-- Mobile Navigation -->
+        <nav class="nav-mobile" id="navMobile">
+            <a href="#hero" class="nav-link-mobile" onclick="closeMobileMenu()">Inicio</a>
+            <a href="#services" class="nav-link-mobile" onclick="closeMobileMenu()">Servicios</a>
+            <a href="#blog" class="nav-link-mobile" onclick="closeMobileMenu()">Blog</a>
+            <a href="#contact" class="nav-link-mobile" onclick="closeMobileMenu()">Contacto</a>
+        </nav>
     </header>
 
     <!-- Hero Section -->
@@ -67,7 +83,7 @@
     </section>
 
     <!-- Services Grid -->
-    <section class="services-section">
+    <section class="services-section" id="services">
         <div class="container">
             <h2 class="services-title font-display" id="servicesTitle">
                 Servicios disponibles para Minería
@@ -88,6 +104,19 @@
                 <button class="btn-primary btn-large" onclick="scrollToContact()">
                     Solicitar Cotización <i data-lucide="arrow-right"></i>
                 </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title font-display">Blog Técnico</h2>
+                <p class="section-subtitle">Artículos especializados sobre tecnología de drones e inspección industrial</p>
+            </div>
+            <div class="blog-grid" id="blogGrid">
+                <!-- Blog posts will be rendered by JavaScript -->
             </div>
         </div>
     </section>
@@ -224,6 +253,16 @@
                 </button>
             </div>
         </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+        <i data-lucide="chevron-up"></i>
+    </button>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
     </div>
 
     <script src="app.js"></script>
