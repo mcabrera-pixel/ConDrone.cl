@@ -1368,6 +1368,75 @@ body {
     outline-offset: 2px;
 }
 
+/* ===================================
+   WhatsApp Float Button
+   =================================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    z-index: 45;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-float svg {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    left: 4.5rem;
+    background: var(--stone-800);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-tooltip::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-right-color: var(--stone-800);
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* Footer contact name */
+.footer-contact-name {
+    color: var(--stone-600);
+    font-weight: 500;
+}
+
 /* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {

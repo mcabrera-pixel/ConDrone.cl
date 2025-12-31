@@ -12,7 +12,7 @@ const blogPosts = [
     image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80',
     date: '2025-01-15',
     readTime: '8 min',
-    url: '/blog/lidar-vs-fotogrametria'
+    url: 'blog/lidar-vs-fotogrametria.html'
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const blogPosts = [
     image: 'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=600&q=80',
     date: '2025-01-10',
     readTime: '10 min',
-    url: '/blog/medicion-espesores-drones'
+    url: 'blog/medicion-espesores-drones.html'
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const blogPosts = [
     image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80',
     date: '2025-01-05',
     readTime: '12 min',
-    url: '/blog/normativa-dgac-drones-chile'
+    url: 'blog/normativa-dgac-drones-chile.html'
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const blogPosts = [
     image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80',
     date: '2024-12-28',
     readTime: '7 min',
-    url: '/blog/termografia-paneles-solares'
+    url: 'blog/termografia-paneles-solares.html'
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const blogPosts = [
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
     date: '2024-12-20',
     readTime: '9 min',
-    url: '/blog/gemelos-digitales-industriales'
+    url: 'blog/gemelos-digitales-industriales.html'
   },
   {
     id: 6,
@@ -62,7 +62,7 @@ const blogPosts = [
     image: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&q=80',
     date: '2024-12-15',
     readTime: '6 min',
-    url: '/blog/fumigacion-drones-vs-tradicional'
+    url: 'blog/fumigacion-drones-vs-tradicional.html'
   }
 ];
 
@@ -653,8 +653,7 @@ function renderBlogPosts() {
 }
 
 function openBlogPost(url) {
-    // For now, show a toast - in production this would navigate to the blog post
-    showToast('Próximamente: Blog completo disponible', 'info');
+    window.location.href = url;
 }
 
 // Toast Notification
