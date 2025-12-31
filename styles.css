@@ -1369,6 +1369,176 @@ body {
 }
 
 /* ===================================
+   Technology Section
+   =================================== */
+.tech-section {
+    padding: 4rem 0;
+    background: white;
+}
+
+.tech-grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .tech-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.tech-card {
+    background: var(--gray-pale);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    position: relative;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.tech-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--salmon);
+}
+
+.tech-card-featured {
+    background: linear-gradient(135deg, var(--stone-800) 0%, var(--stone-900) 100%);
+    color: white;
+    grid-column: span 1;
+}
+
+@media (min-width: 640px) {
+    .tech-card-featured {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .tech-card-featured {
+        grid-column: span 2;
+        grid-row: span 2;
+        padding: 2rem;
+    }
+}
+
+.tech-card-featured .tech-card-desc {
+    color: var(--stone-300);
+}
+
+.tech-card-featured .tech-card-subtitle {
+    color: var(--salmon-light);
+}
+
+.tech-card-featured .tech-card-specs span {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.tech-card-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--salmon);
+    color: white;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tech-card-icon {
+    width: 3rem;
+    height: 3rem;
+    background: rgba(196, 150, 122, 0.1);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--salmon);
+    margin-bottom: 1rem;
+}
+
+.tech-card-featured .tech-card-icon {
+    width: 4rem;
+    height: 4rem;
+    background: var(--salmon);
+    color: white;
+}
+
+.tech-card-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.tech-card-featured .tech-card-icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.tech-card-title {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--stone-800);
+    margin-bottom: 0.25rem;
+}
+
+.tech-card-featured .tech-card-title {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.tech-card-subtitle {
+    font-size: 0.8125rem;
+    color: var(--salmon);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.tech-card-desc {
+    font-size: 0.875rem;
+    color: var(--stone-500);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.tech-card-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-card-specs span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--stone-600);
+    background: white;
+    padding: 0.375rem 0.625rem;
+    border-radius: 0.375rem;
+}
+
+.tech-card-specs svg {
+    width: 0.875rem;
+    height: 0.875rem;
+    color: var(--salmon);
+}
+
+.tech-card-featured .tech-card-specs svg {
+    color: var(--salmon-light);
+}
+
+/* ===================================
    WhatsApp Float Button
    =================================== */
 .whatsapp-float {
