@@ -16,6 +16,7 @@ Volar drones comercialmente en Chile requiere cumplir con la normativa de la **D
 ## Marco regulatorio actual
 
 La operación de drones en Chile está regulada por:
+- **DAN 91**: Reglas de aire (áreas no pobladas)
 - **DAN 151**: Norma que regula los RPAS (Remotely Piloted Aircraft Systems)
 - **Circular de Información Aeronáutica (AIC)**: Actualizaciones periódicas
 - **Ley 18.916**: Código Aeronáutico de Chile
