@@ -16,17 +16,17 @@ Volar drones comercialmente en Chile requiere cumplir con la normativa de la **D
 ## Marco regulatorio actual
 
 La operación de drones en Chile está regulada por:
-- **DAN 151**: Norma que regula los RPAS (Remotely Piloted Aircraft Systems)
-- **Circular de Información Aeronáutica (AIC)**: Actualizaciones periódicas
+- **DAN 91**: Reglas del aire (áreas no pobladas)
+- **DAN 151**: Operaciones de Aeronaves Pilotadas a distancia (RPAS) en Asuntos de Interés Público, que se efectúen sobre Áreas Pobladas.
 - **Ley 18.916**: Código Aeronáutico de Chile
 
 ### Clasificación de drones según peso
 
 | Categoría | Peso | Requisitos |
 |-----------|------|------------|
-| Muy pequeño | < 750 g | Registro online, sin licencia |
-| Pequeño | 750 g - 25 kg | Registro + Licencia DGAC |
-| Grande | > 25 kg | Certificación especial |
+| Muy pequeño | < 750 g | Credencial de Operador RPAS |
+| Pequeño | 750 g - 25 kg | Credencial de Operador RPAS |
+| Grande | > 25 kg | Credencial de Operador RPAS |
 
 ## Requisitos para vuelos comerciales
 
