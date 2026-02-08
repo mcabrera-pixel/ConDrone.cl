@@ -57,11 +57,43 @@
 
 ---
 
-### 🚀 Despliegue a Cloudflare Pages (15:08 - en curso)
+### 🚀 Despliegue a Cloudflare Pages (19:20 - 19:31)
 
-**Objetivo:** Publicar el sitio usando Cloudflare Pages y configurar todos los servicios disponibles.
+**Objetivo:** Publicar el sitio usando Cloudflare Pages y todos sus servicios.
 
-*(En progreso...)*
+**Lo que se hizo:**
+
+1. **Preparación del repositorio**
+   - Se copió `index.html`, `styles.css` y `BITACORA.md` al repo `ConDrone_repo`
+   - Se hizo `git checkout main`, merge con cambios remotos
+   - Commit: `feat: Rediseño completo con paleta pastel minimalista, CTAs WhatsApp y formulario`
+   - Push exitoso a `github.com/mcabrera-pixel/ConDrone.cl` (`main → 710f84d`)
+
+2. **Despliegue a Cloudflare Pages via Wrangler CLI**
+   - Se creó el proyecto `condrone` en Cloudflare Pages
+   - Se desplegaron 16 archivos exitosamente
+   - ✅ **Sitio en vivo:** https://condrone.pages.dev
+
+3. **Servicios de Cloudflare activados automáticamente:**
+   - ✅ **CDN Global** — Caché en 300+ datacenters mundiales
+   - ✅ **SSL/TLS** — Certificado HTTPS automático
+   - ✅ **DDoS Protection** — Protección contra ataques
+   - ✅ **HTTP/2 + HTTP/3** — Conexiones ultra-rápidas
+   - ✅ **Brotli Compression** — Compresión automática de assets
+   - ✅ **Edge Caching** — Assets estáticos en la edge
+   - ✅ **Preview Deployments** — Deploy preview por cada push
+
+4. **Verificación**
+   - Sitio verificado en vivo — todas las 9 secciones cargan correctamente
+   - Title correcto: "ConDron | Servicios Profesionales de Drones..."
+   - Hero, servicios, galería, testimonios, formulario, footer = ✅
+
+**Pendiente:**
+- [ ] Configurar dominio personalizado `condron.cl` en Cloudflare
+- [ ] Activar Web Analytics de Cloudflare
+- [ ] Configurar reglas de caché avanzadas
+- [ ] Configurar Cloudflare Email Routing si se necesita email
+- [ ] Activar Cloudflare Turnstile para proteger el formulario
 
 ---
 
@@ -74,9 +106,13 @@
 | Íconos | Font Awesome 6.5.1 CDN |
 | Imágenes | Unsplash (stock photos reales) |
 | CTA principal | WhatsApp Business API |
-| Hosting | Cloudflare Pages (en configuración) |
-| SSL | Cloudflare (automático) |
-| CDN | Cloudflare (automático) |
+| Hosting | **Cloudflare Pages** ✅ |
+| URL | https://condrone.pages.dev |
+| SSL | Cloudflare (automático) ✅ |
+| CDN | Cloudflare (300+ PoP) ✅ |
+| DDoS | Cloudflare Protection ✅ |
+| Repo | github.com/mcabrera-pixel/ConDrone.cl |
+| Branch | main |
 
 ---
-*Última actualización: 2026-02-08 15:08*
+*Última actualización: 2026-02-08 19:31*
