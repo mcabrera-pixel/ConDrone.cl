@@ -93,7 +93,44 @@
 - [ ] Activar Web Analytics de Cloudflare
 - [ ] Configurar reglas de caché avanzadas
 - [ ] Configurar Cloudflare Email Routing si se necesita email
-- [ ] Activar Cloudflare Turnstile para proteger el formulario
+---
+
+## 2026-03-03 — Fase 6: Activación de Servicios + Limpieza
+
+### 🔐 Activación Cloudflare Turnstile (18:30 - 18:45)
+
+**Objetivo:** Activar anti-spam en formulario, limpiar placeholders, y hacer deploy consolidado.
+
+**Lo que se hizo:**
+
+1. **Cloudflare Turnstile activado**
+   - Widget creado en Cloudflare Dashboard
+   - Site Key `0x4AAAAAAClyaxTUDwNo4Mkx` aplicado en `index.html`
+   - ✅ Widget visible en producción: "Verifica que eres un ser humano"
+
+2. **Cloudflare Web Analytics**
+   - Ya estaba activo con "Automatic setup" (datos fluyendo)
+   - Snippet placeholder `YOUR_CF_ANALYTICS_TOKEN` eliminado del HTML
+   - Core Web Vitals: LCP 100% Good, 812ms P50
+
+3. **Google Analytics 4**
+   - Decidido no activar (CF Analytics suficiente)
+   - Bloque GA4 eliminado del HTML
+
+4. **Limpieza de archivos**
+   - 6 archivos `.md` fuente del blog eliminados (ya convertidos a HTML)
+   - `deploy.log` eliminado
+   - Email corregido: `contacto@condrone.cl` → `contacto@condron.cl` en `schema-markup.html` y `README.md`
+
+5. **Deploy consolidado**
+   - Git commit: `feat(phase6): activate Turnstile, remove GA4/CF Analytics placeholders, cleanup .md sources`
+   - Wrangler deploy: 3 archivos nuevos + 73 en caché
+   - Verificado en producción ✅
+
+**Completado:**
+- [x] Google Search Console: propiedad verificada + sitemap enviado (13 páginas, Correcto)
+- [x] Email Routing: `contacto@condron.cl` → `mcabrera@mccocopper.cl` (MX + SPF + DKIM)
+- [x] DNS: `www.condron.cl` Custom Domain agregado en Pages
 
 ---
 
@@ -104,15 +141,20 @@
 | Stack | HTML + CSS vanilla (sin frameworks) |
 | Fuentes | Google Fonts (Inter, Outfit) |
 | Íconos | Font Awesome 6.5.1 CDN |
-| Imágenes | Unsplash (stock photos reales) |
+| Imágenes | AI-generated (WebP optimizado) |
 | CTA principal | WhatsApp Business API |
 | Hosting | **Cloudflare Pages** ✅ |
-| URL | https://condrone.pages.dev |
+| URL | https://condron.cl |
+| Email | contacto@condron.cl ✅ |
 | SSL | Cloudflare (automático) ✅ |
 | CDN | Cloudflare (300+ PoP) ✅ |
 | DDoS | Cloudflare Protection ✅ |
+| Turnstile | Activo ✅ |
+| Analytics | Cloudflare Web Analytics (Automatic) ✅ |
+| Search Console | Verificado + Sitemap ✅ |
 | Repo | github.com/mcabrera-pixel/ConDrone.cl |
 | Branch | main |
 
 ---
-*Última actualización: 2026-02-08 19:31*
+*Última actualización: 2026-03-03 19:59*
+
