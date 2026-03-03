@@ -1,0 +1,37 @@
+# ═══════════════════════════════════════════
+# ConDron.cl — Advanced Cache & Security Headers
+# Cloudflare Pages _headers file
+# ═══════════════════════════════════════════
+
+# Global security headers
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Images — aggressive long-term cache (1 year)
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Logo and OG image
+/logo.png
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS and JS — cache for 1 week (may change between deploys)
+/*.css
+  Cache-Control: public, max-age=604800
+/*.js
+  Cache-Control: public, max-age=604800
+
+# HTML — short cache, always revalidate
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# GEO / AI files — cache for 1 day
+/llms.txt
+  Cache-Control: public, max-age=86400
+/robots.txt
+  Cache-Control: public, max-age=86400
+/sitemap.xml
+  Cache-Control: public, max-age=86400

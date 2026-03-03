@@ -1077,6 +1077,13 @@ img {
   gap: 16px;
 }
 
+/* Turnstile CAPTCHA widget */
+.turnstile-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 8px 0 16px;
+}
+
 .btn-submit {
   width: 100%;
   padding: 14px;

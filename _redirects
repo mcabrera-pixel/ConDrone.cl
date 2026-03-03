@@ -1,0 +1,2 @@
+# Redirect www to apex domain (301 permanent)
+https://www.condron.cl/* https://condron.cl/:splat 301

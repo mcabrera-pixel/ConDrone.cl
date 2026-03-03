@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Preconnect for faster external resource loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <title>ConDron | Servicios Profesionales de Drones en Chile - Inspección, Fotogrametría y Topografía</title>
     <meta name="description"
         content="Especialistas en servicios de drones profesionales en Chile. Servicios DGAC. Fotogrametría, topografía LiDAR, termografía industrial y medición de espesores NDT. Cotiza tu inspección.">
@@ -17,7 +22,11 @@
     <meta property="og:title" content="ConDron | Servicios Profesionales de Drones en Chile">
     <meta property="og:description"
         content="Servicios de drones certificados para la industria en Chile. Minería, fotogrametría, termografía y medición de espesores API 653.">
-    <meta property="og:image" content="https://condron.cl/assets/og-image.jpg">
+    <meta property="og:image" content="https://condron.cl/assets/og-image.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
 
     <!-- AI / LLM Discovery -->
     <link rel="canonical" href="https://condron.cl/">
@@ -57,6 +66,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="cotizar/wizard.css">
+
+    <!-- Cloudflare Turnstile (anti-spam) -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 
 <body>
@@ -94,8 +106,8 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1508444845599-5c89863b1c44?auto=format&fit=crop&w=800&q=80"
-                    alt="Dron profesional volando sobre terreno industrial">
+                <img decoding="async" fetchpriority="high" src="assets/images/hero-condron.webp"
+                    alt="Dron profesional DJI Matrice volando sobre mina de cobre en Chile">
                 <div class="hero-float top">
                     <div class="icon-circle" style="background: var(--sky-light); color: var(--chile-blue);">
                         <i class="fa-solid fa-check-double"></i>
@@ -158,7 +170,7 @@
                 <!-- 1. Topografía LiDAR -->
                 <div class="service-card" data-modal="modal-topografia" role="button" tabindex="0">
                     <div class="service-card-img">
-                        <img src="assets/images/topografia-lidar.png"
+                        <img loading="lazy" decoding="async" src="assets/images/topografia-lidar.webp"
                             alt="Dron DJI Matrice 400 con sensor LiDAR sobrevolando mina de cobre en Atacama Chile">
                     </div>
                     <div class="service-card-body">
@@ -173,7 +185,7 @@
                 <!-- 2. Termografía -->
                 <div class="service-card" data-modal="modal-termografia" role="button" tabindex="0">
                     <div class="service-card-img">
-                        <img src="assets/images/termografia-inspeccion.png"
+                        <img loading="lazy" decoding="async" src="assets/images/termografia-inspeccion.webp"
                             alt="Dron DJI Matrice 4T con cámara infrarroja inspeccionando planta solar">
                     </div>
                     <div class="service-card-body">
@@ -188,7 +200,7 @@
                 <!-- 3. Espesores NDT -->
                 <div class="service-card" data-modal="modal-espesores" role="button" tabindex="0">
                     <div class="service-card-img">
-                        <img src="assets/images/espesores-ndt.png"
+                        <img loading="lazy" decoding="async" src="assets/images/espesores-ndt.webp"
                             alt="Dron Matrice 400 con sensor ultrasónico midiendo espesor de tanque API 653">
                     </div>
                     <div class="service-card-body">
@@ -203,7 +215,7 @@
                 <!-- 4. Inspección Visual -->
                 <div class="service-card" data-modal="modal-visual" role="button" tabindex="0">
                     <div class="service-card-img">
-                        <img src="assets/images/inspeccion-visual.png"
+                        <img loading="lazy" decoding="async" src="assets/images/inspeccion-visual.webp"
                             alt="Dron Mavic 4 Pro inspeccionando chimenea industrial detectando corrosión">
                     </div>
                     <div class="service-card-body">
@@ -219,7 +231,7 @@
                 <!-- 5. Interiores -->
                 <div class="service-card" data-modal="modal-interiores" role="button" tabindex="0">
                     <div class="service-card-img">
-                        <img src="assets/images/interiores-confinados.png"
+                        <img loading="lazy" decoding="async" src="assets/images/interiores-confinados.webp"
                             alt="Dron DJI Neo con luces LED volando dentro de silo industrial para inspección">
                     </div>
                     <div class="service-card-body">
@@ -234,7 +246,7 @@
                 <!-- 6. Video Cinematográfico -->
                 <div class="service-card" data-modal="modal-video" role="button" tabindex="0">
                     <div class="service-card-img">
-                        <img src="assets/images/video-cinematografico.png"
+                        <img loading="lazy" decoding="async" src="assets/images/video-cinematografico.webp"
                             alt="Dron Mavic 3 Pro Cine grabando video 5.1K con Cordillera de los Andes al atardecer">
                     </div>
                     <div class="service-card-body">
@@ -250,7 +262,7 @@
                 <!-- 7. Seguimiento de Obras -->
                 <div class="service-card" data-modal="modal-seguimiento" role="button" tabindex="0">
                     <div class="service-card-img">
-                        <img src="assets/images/seguimiento-obras.png"
+                        <img loading="lazy" decoding="async" src="assets/images/seguimiento-obras.webp"
                             alt="Vista aérea de obra en construcción con ortomosaico y marcadores GIS">
                     </div>
                     <div class="service-card-body">
@@ -455,8 +467,8 @@
     <section class="section why-us" id="nosotros">
         <div class="container">
             <div class="why-image">
-                <img src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=800&q=80"
-                    alt="Equipo de pilotos de dron preparando equipo DJI Matrice">
+                <img loading="lazy" decoding="async" src="assets/images/equipo-pilotos.webp"
+                    alt="Equipo de pilotos de dron ConDron preparando DJI Matrice en terreno">
             </div>
             <div class="why-content">
                 <span class="section-label">¿Por qué ConDron?</span>
@@ -519,8 +531,8 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1605792657660-596af9009e82?auto=format&fit=crop&w=600&q=80"
-                        alt="Levantamiento topográfico con dron en minería">
+                    <img loading="lazy" decoding="async" src="assets/images/galeria-topografia.webp"
+                        alt="Vista aérea de mina de cobre con levantamiento topográfico">
                     <div class="gallery-overlay">
                         <div>
                             <h4>Levantamiento Topográfico</h4><span>Minería — Atacama</span>
@@ -528,8 +540,8 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=600&q=80"
-                        alt="Inspección de torres de alta tensión con dron">
+                    <img loading="lazy" decoding="async" src="assets/images/galeria-torres.webp"
+                        alt="Dron DJI inspeccionando torre de alta tensión">
                     <div class="gallery-overlay">
                         <div>
                             <h4>Inspección de Torres</h4><span>Energía — Región Metropolitana</span>
@@ -537,8 +549,8 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1503387837-b154d5074bd2?auto=format&fit=crop&w=600&q=80"
-                        alt="Fotogrametría 3D de proyecto de construcción">
+                    <img loading="lazy" decoding="async" src="assets/images/galeria-fotogrametria.webp"
+                        alt="Modelo 3D fotogramétrico de obra en construcción">
                     <div class="gallery-overlay">
                         <div>
                             <h4>Fotogrametría 3D</h4><span>Construcción — Valparaíso</span>
@@ -546,8 +558,8 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600&q=80"
-                        alt="Inspección termográfica de planta solar">
+                    <img loading="lazy" decoding="async" src="assets/images/galeria-termografia.webp"
+                        alt="Imagen térmica infrarroja de planta solar con hotspots">
                     <div class="gallery-overlay">
                         <div>
                             <h4>Análisis Termográfico</h4><span>Solar — Antofagasta</span>
@@ -555,8 +567,8 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80"
-                        alt="Modelo digital de terreno minero">
+                    <img loading="lazy" decoding="async" src="assets/images/galeria-terreno.webp"
+                        alt="Modelo digital de elevación colorizado de terreno minero">
                     <div class="gallery-overlay">
                         <div>
                             <h4>Modelo Digital de Terreno</h4><span>Minería — Coquimbo</span>
@@ -564,8 +576,8 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=600&q=80"
-                        alt="Inspección industrial de chimeneas con dron">
+                    <img loading="lazy" decoding="async" src="assets/images/galeria-chimeneas.webp"
+                        alt="Dron industrial inspeccionando chimenea de planta">
                     <div class="gallery-overlay">
                         <div>
                             <h4>Inspección de Chimeneas</h4><span>Industrial — Santiago</span>
@@ -587,8 +599,8 @@
             </div>
             <div class="certification-content">
                 <div class="cert-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1579829366248-204fe8413f31?q=80&w=1200&auto=format&fit=crop"
-                        alt="Piloto Certificado DGAC operando Matrice 300 RTK" class="cert-image">
+                    <img loading="lazy" decoding="async" src="assets/images/piloto-certificado.webp"
+                        alt="Piloto Certificado DGAC operando DJI Matrice en faena" class="cert-image">
                 </div>
             </div>
         </div>
@@ -607,8 +619,8 @@
                     <p class="testimonial-text">"ConDron nos entregó un levantamiento topográfico increíblemente preciso
                         en la mitad del tiempo que nos tomaba con métodos tradicionales. Profesionalismo total."</p>
                     <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
-                            alt="Carlos Mendoza" class="testimonial-avatar">
+                        <img loading="lazy" decoding="async" src="assets/images/avatar-carlos.webp" alt="Carlos Mendoza"
+                            class="testimonial-avatar">
                         <div>
                             <div class="testimonial-name">Carlos Mendoza</div>
                             <div class="testimonial-role">Jefe de Operaciones — Minera del Norte</div>
@@ -620,7 +632,7 @@
                     <p class="testimonial-text">"La inspección termográfica de nuestras líneas de alta tensión fue
                         impecable. Detectaron fallas que no habríamos encontrado de otra manera. 100% recomendados."</p>
                     <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80"
+                        <img loading="lazy" decoding="async" src="assets/images/avatar-maria.webp"
                             alt="María Belén Torres" class="testimonial-avatar">
                         <div>
                             <div class="testimonial-name">María Belén Torres</div>
@@ -633,7 +645,7 @@
                     <p class="testimonial-text">"Excelente servicio de medición de espesores. Su dron con sensor
                         ultrasónico nos evitó montar andamios costosos. Rápido, seguro y con datos confiables."</p>
                     <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80"
+                        <img loading="lazy" decoding="async" src="assets/images/avatar-roberto.webp"
                             alt="Roberto Sánchez" class="testimonial-avatar">
                         <div>
                             <div class="testimonial-name">Roberto Sánchez</div>
@@ -710,6 +722,13 @@
                         <textarea id="message"
                             placeholder="Describe brevemente tu necesidad, ubicación y plazos..."></textarea>
                     </div>
+
+                    <!-- Cloudflare Turnstile (anti-spam) -->
+                    <div class="turnstile-wrapper">
+                        <div class="cf-turnstile" data-sitekey="YOUR_SITE_KEY" data-theme="light" data-language="es">
+                        </div>
+                    </div>
+
                     <button type="submit" class="btn-submit">
                         Enviar Solicitud <i class="fa-solid fa-paper-plane" style="margin-left:8px;"></i>
                     </button>
@@ -724,7 +743,8 @@
         <!-- Modal: Topografía -->
         <div class="service-modal" id="modal-topografia">
             <button class="modal-close" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
-            <div class="modal-hero"><img src="assets/images/topografia-lidar.png" alt="Topografía LiDAR">
+            <div class="modal-hero"><img loading="lazy" decoding="async" src="assets/images/topografia-lidar.webp"
+                    alt="Topografía LiDAR">
                 <div class="modal-hero-overlay"><span class="service-tag tag-blue">Topografía</span>
                     <h2>Topografía LiDAR & Fotogrametría</h2>
                 </div>
@@ -775,7 +795,8 @@
         <!-- Modal: Termografía -->
         <div class="service-modal" id="modal-termografia">
             <button class="modal-close" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
-            <div class="modal-hero"><img src="assets/images/termografia-inspeccion.png" alt="Termografía">
+            <div class="modal-hero"><img loading="lazy" decoding="async" src="assets/images/termografia-inspeccion.webp"
+                    alt="Termografía">
                 <div class="modal-hero-overlay"><span class="service-tag tag-pink">Térmica</span>
                     <h2>Termografía e Inspección Térmica</h2>
                 </div>
@@ -813,7 +834,8 @@
         <!-- Modal: Espesores NDT -->
         <div class="service-modal" id="modal-espesores">
             <button class="modal-close" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
-            <div class="modal-hero"><img src="assets/images/espesores-ndt.png" alt="Espesores NDT">
+            <div class="modal-hero"><img loading="lazy" decoding="async" src="assets/images/espesores-ndt.webp"
+                    alt="Espesores NDT">
                 <div class="modal-hero-overlay"><span class="service-tag tag-sky">NDT</span>
                     <h2>Medición de Espesores (NDT)</h2>
                 </div>
@@ -855,7 +877,8 @@
         <!-- Modal: Inspección Visual -->
         <div class="service-modal" id="modal-visual">
             <button class="modal-close" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
-            <div class="modal-hero"><img src="assets/images/inspeccion-visual.png" alt="Inspección Visual">
+            <div class="modal-hero"><img loading="lazy" decoding="async" src="assets/images/inspeccion-visual.webp"
+                    alt="Inspección Visual">
                 <div class="modal-hero-overlay"><span class="service-tag tag-peach">Visual</span>
                     <h2>Inspección Visual de Estructuras</h2>
                 </div>
@@ -892,7 +915,8 @@
         <!-- Modal: Interiores -->
         <div class="service-modal" id="modal-interiores">
             <button class="modal-close" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
-            <div class="modal-hero"><img src="assets/images/interiores-confinados.png" alt="Interiores">
+            <div class="modal-hero"><img loading="lazy" decoding="async" src="assets/images/interiores-confinados.webp"
+                    alt="Interiores">
                 <div class="modal-hero-overlay"><span class="service-tag tag-lavender">Interiores</span>
                     <h2>Interiores & Espacios Confinados</h2>
                 </div>
@@ -935,7 +959,8 @@
         <!-- Modal: Video Cinematográfico -->
         <div class="service-modal" id="modal-video">
             <button class="modal-close" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
-            <div class="modal-hero"><img src="assets/images/video-cinematografico.png" alt="Video Cinematográfico">
+            <div class="modal-hero"><img loading="lazy" decoding="async" src="assets/images/video-cinematografico.webp"
+                    alt="Video Cinematográfico">
                 <div class="modal-hero-overlay"><span class="service-tag tag-blue">Audiovisual</span>
                     <h2>Video & Fotografía Cinematográfica</h2>
                 </div>
@@ -974,7 +999,8 @@
         <!-- Modal: Seguimiento de Obras -->
         <div class="service-modal" id="modal-seguimiento">
             <button class="modal-close" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
-            <div class="modal-hero"><img src="assets/images/seguimiento-obras.png" alt="Seguimiento de Obras">
+            <div class="modal-hero"><img loading="lazy" decoding="async" src="assets/images/seguimiento-obras.webp"
+                    alt="Seguimiento de Obras">
                 <div class="modal-hero-overlay"><span class="service-tag tag-sky">Monitoreo</span>
                     <h2>Seguimiento de Obras y Avance</h2>
                 </div>
@@ -1099,15 +1125,26 @@
     <script src="webmcp.js"></script>
     <script>
 
-        // Form submit handler
+        // Form submit handler (with Turnstile validation)
         document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
+
+            // Verify Turnstile challenge is completed
+            const turnstileResponse = document.querySelector('[name="cf-turnstile-response"]');
+            if (turnstileResponse && !turnstileResponse.value) {
+                alert('Por favor, completa la verificación de seguridad antes de enviar.');
+                return;
+            }
+
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
             const service = document.getElementById('service').value;
             const message = document.getElementById('message').value;
             const waText = `Hola ConDron! Soy ${name}.\nServicio: ${service}\nTeléfono: ${phone}\nMensaje: ${message}`;
             window.open(`https://wa.me/56979860843?text=${encodeURIComponent(waText)}`, '_blank');
+
+            // Reset Turnstile after submission
+            if (typeof turnstile !== 'undefined') turnstile.reset();
         });
 
         // Animate on scroll (simple IntersectionObserver)
@@ -1175,6 +1212,10 @@
             if (e.key === 'Escape') closeServiceModal();
         });
     </script>
+
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "YOUR_CF_ANALYTICS_TOKEN"}'></script>
 
 </body>
 
