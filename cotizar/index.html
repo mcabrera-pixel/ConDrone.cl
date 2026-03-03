@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizar Servicio — ConDrone</title>
+    <meta name="description"
+        content="Cotiza tu servicio de drones profesionales: topografía, inspección industrial, termografía, video aéreo. Propuesta técnica transparente con desglose en UF.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../logo.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="wizard.css">
+</head>
+
+<body>
+    <div class="wizard-page">
+        <!-- Header -->
+        <div class="wizard-header">
+            <a href="../">
+                <img src="../logo.png" alt="ConDrone" class="wizard-logo">
+            </a>
+            <h1>Cotización Profesional</h1>
+            <p>Configura tu proyecto y obtén una propuesta técnica económica al instante.</p>
+        </div>
+
+        <!-- CALCULATOR: Single-Page Layout -->
+        <div class="calculator-layout">
+            <!-- LEFT: Inputs -->
+            <div class="calc-inputs">
+                <h2><i class="fa-solid fa-sliders"></i> Configura tu Proyecto</h2>
+
+                <!-- Service -->
+                <div class="field-group">
+                    <label><i class="fa-solid fa-helicopter"></i> ¿Qué servicio necesitas?</label>
+                    <select id="service-select">
+                        <option value="topografia">Topografía & Fotogrametría</option>
+                        <option value="inspeccion">Inspección Industrial</option>
+                        <option value="termografia">Termografía & NDT</option>
+                        <option value="video">Video & Fotografía Aérea</option>
+                        <option value="interiores">Interiores & Espacios Confinados</option>
+                        <option value="seguimiento">Seguimiento de Obras</option>
+                        <option value="pipeline">Pipeline / Inspección Lineal</option>
+                    </select>
+                    <div class="field-meta" id="service-meta"></div>
+                </div>
+
+                <!-- Size -->
+                <div class="field-group">
+                    <label id="size-label"><i class="fa-solid fa-ruler-combined"></i> Alcance</label>
+                    <div class="input-row">
+                        <input type="number" id="size-input" value="10" min="1" step="1">
+                        <span class="input-unit" id="size-unit">ha</span>
+                    </div>
+                    <div class="field-meta" id="size-meta"></div>
+                </div>
+
+                <!-- Location -->
+                <div class="field-group">
+                    <label><i class="fa-solid fa-location-dot"></i> ¿Dónde está tu proyecto?</label>
+                    <select id="location-select">
+                        <option value="rm">Santiago / Región Metropolitana</option>
+                        <option value="central">Zona Central (V–VI Región)</option>
+                        <option value="northSouth">Norte / Sur (Vuelo requerido)</option>
+                        <option value="mining">Faena Minera (Zona Norte)</option>
+                    </select>
+                </div>
+
+                <!-- Deliverables -->
+                <div class="field-group">
+                    <label><i class="fa-solid fa-box-open"></i> Entregables <span class="label-hint">(selecciona uno o
+                            más)</span></label>
+                    <div class="checkbox-grid" id="deliverables-grid">
+                        <!-- Rendered by JS -->
+                    </div>
+                </div>
+
+                <!-- Toggles -->
+                <div class="field-group toggles-group">
+                    <div class="toggle-row">
+                        <div>
+                            <strong>Zona Peligrosa / Altura</strong>
+                            <span>Espacios confinados, gases, trabajo en altura</span>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="hazard-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="toggle-row">
+                        <div>
+                            <strong>Permiso DGAC</strong>
+                            <span>Zona poblada o cerca de aeropuertos</span>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="dgac-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="toggle-row">
+                        <div>
+                            <strong>Servicio Urgente</strong>
+                            <span>Entrega prioritaria (< 72 hrs)</span>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="urgency-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Live Result -->
+            <div class="calc-result" id="calc-result">
+                <!-- Rendered live by JS -->
+            </div>
+        </div>
+
+        <!-- WHATSAPP DISCOUNT BANNER -->
+        <div class="discount-banner">
+            <div class="discount-content">
+                <div class="discount-badge">🎉 -10%</div>
+                <div class="discount-text">
+                    <h3>¿Eres cliente nuevo? ¡Tienes un 10% de descuento!</h3>
+                    <p>Escríbenos por WhatsApp mencionando <strong>"CLIENTE NUEVO"</strong> y te aplicamos el descuento
+                        en tu primera cotización.</p>
+                </div>
+                <a class="discount-cta"
+                    href="https://wa.me/56979860843?text=Hola%20ConDrone!%20Soy%20cliente%20nuevo%20y%20me%20interesa%20cotizar%20un%20servicio%20de%20drones.%20🚁"
+                    target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Pedir Descuento por WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <!-- DELIVERABLES GUIDE -->
+        <div class="deliverables-guide">
+            <h2><i class="fa-solid fa-book-open"></i> ¿Qué incluye cada entregable?</h2>
+            <p class="guide-subtitle">Conoce en detalle cada producto técnico que puedes solicitar.</p>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <div class="guide-icon"><i class="fa-solid fa-map"></i></div>
+                    <h3>Ortomosaico + Nube de Puntos</h3>
+                    <p>Imagen aérea georeferenciada de alta resolución (2-3 cm/px) y nube de puntos 3D en formato
+                        LAS/E57.
+                        Combina cientos de fotos en un mapa continuo y preciso.</p>
+                    <div class="guide-example">
+                        <strong>Ejemplo:</strong> Ortomosaico de planta solar de 50 ha para planificar mantención de
+                        paneles, con nube de puntos para medir pendientes del terreno.
+                    </div>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-icon"><i class="fa-solid fa-file-lines"></i></div>
+                    <h3>Informe de Inspección Visual</h3>
+                    <p>Documento PDF con registro fotográfico detallado de cada elemento inspeccionado, identificando
+                        daños,
+                        corrosión, deformaciones y anomalías visibles.</p>
+                    <div class="guide-example">
+                        <strong>Ejemplo:</strong> Inspección de 12 torres de alta tensión con fotos de cada cruceta,
+                        aisladores y conexiones. Se detectó corrosión en 3 torres.
+                    </div>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-icon"><i class="fa-solid fa-cube"></i></div>
+                    <h3>Modelo 3D / MDE / MDS</h3>
+                    <p>Modelo digital tridimensional navegable. MDE (Modelo Digital de Elevación) y MDS (Modelo Digital
+                        de Superficie)
+                        para análisis topográfico avanzado, cubicación y diseño.</p>
+                    <div class="guide-example">
+                        <strong>Ejemplo:</strong> Modelo 3D de cantera minera para calcular volumen de material removido
+                        (cubicación mensual de 250.000 m³).
+                    </div>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-icon"><i class="fa-solid fa-temperature-high"></i></div>
+                    <h3>Informe Termográfico</h3>
+                    <p>Análisis con cámara infrarroja radiométrica que detecta diferencias de temperatura invisible al
+                        ojo humano.
+                        Exporta datos con paleta térmica y mediciones puntuales.</p>
+                    <div class="guide-example">
+                        <strong>Ejemplo:</strong> Inspección de subestación eléctrica: se detectaron 4 puntos calientes
+                        en conexiones (ΔT >15°C) antes de una falla.
+                    </div>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-icon"><i class="fa-solid fa-film"></i></div>
+                    <h3>Video Editado 4K/5.1K</h3>
+                    <p>Producción audiovisual con cámara Hasselblad 5.1K, color grading profesional, música y gráficas.
+                        Ideal para marketing corporativo, inmobiliaria y registro de avance.</p>
+                    <div class="guide-example">
+                        <strong>Ejemplo:</strong> Video 4K de 90 segundos de proyecto inmobiliario con tomas orbitales,
+                        follow-cam y transiciones para publicidad en redes.
+                    </div>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-icon"><i class="fa-solid fa-ruler"></i></div>
+                    <h3>Informe NDT — Espesores (API 653)</h3>
+                    <p>Medición ultrasónica de espesores de pared en tanques, tuberías y estructuras metálicas según
+                        norma API 653.
+                        Sin necesidad de andamios ni detener operaciones.</p>
+                    <div class="guide-example">
+                        <strong>Ejemplo:</strong> Medición de 120 puntos en tanque de almacenamiento de 15m de diámetro.
+                        Se identificaron 8 zonas con espesor bajo mínimo normativo.
+                    </div>
+                </div>
+                <div class="guide-card">
+                    <div class="guide-icon"><i class="fa-solid fa-earth-americas"></i></div>
+                    <h3>GIS / KML / Shapefile</h3>
+                    <p>Archivos geoespaciales compatibles con Google Earth, QGIS y ArcGIS. Permite integrar los datos
+                        del vuelo
+                        directamente en tu sistema de información geográfica.</p>
+                    <div class="guide-example">
+                        <strong>Ejemplo:</strong> Shapefile de servidumbre de paso de gasoducto (25 km) con puntos de
+                        referencia, cotas y límites de franja de seguridad.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="wizard-footer">
+            <p>
+                <a href="../"><i class="fa-solid fa-arrow-left"></i> Volver a ConDrone</a>
+                &nbsp;·&nbsp;
+                <a href="https://wa.me/56979860843" target="_blank"><i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp</a>
+            </p>
+            <p style="margin-top: 6px;">© 2024 ConDrone · Servicios Aéreos Profesionales</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="wizard.js"></script>
+</body>
+
+</html>

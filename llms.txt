@@ -1,0 +1,75 @@
+# ConDron Chile — Servicios Profesionales de Drones
+# URL: https://condron.cl
+# Contact: +56 9 7986 0843 | mcabrera@mccocopper.cl
+
+## About
+ConDron is a professional drone services company based in Santiago, Chile, operating nationwide. We are DGAC (Dirección General de Aeronáutica Civil) certified with AOC & RPAS licenses under DAN 151 and DAN 91 regulations. Part of MCCO Group.
+
+## Services
+We offer 7 specialized drone services with a fleet of 9 DJI enterprise drones:
+
+1. **Topography LiDAR & Photogrammetry** — 3D point clouds, orthomosaics, DEM/DSM with RTK centimetric precision. Drones: DJI Matrice 400 + L3, Matrice 4E.
+2. **Thermography & Thermal Inspection** — Infrared radiometric mapping, hot spot detection (ΔT analysis). Drone: DJI Matrice 4T (640×512 thermal sensor).
+3. **NDT Thickness Measurement** — Ultrasonic non-destructive testing per API 653 for chimneys, tanks, pipes. Drone: DJI Matrice 400 + PTG6/PTG8. No scaffolding needed.
+4. **Visual Structural Inspection** — Crack, corrosion, and damage detection on towers, chimneys, bridges. Drones: Mavic 4 Pro, Matrice 4T, FPV Mini.
+5. **Interior & Confined Spaces** — Inspection of warehouses, tunnels, boilers, silos without human exposure. Drones: DJI Neo, FPV Mini.
+6. **Cinematic Video & Photography** — 5.1K/4K Hasselblad production for corporate, real estate, marketing. Drones: Mavic 3 Pro Cine, Mavic 4 Pro.
+7. **Construction Progress Monitoring** — Periodic reports, temporal comparisons, sequential orthomosaics with RTK. Drones: Matrice 4E, Mavic 4 Pro.
+
+## Pricing (Reference in UF — Chilean currency unit)
+- Basic (Video/Photo 4K): from 12 UF/day
+- Professional (Photogrammetry + Inspection): from 25 UF/day
+- Industrial (NDT Thickness + Thermography): from 40 UF/day
+- Online calculator available at https://condron.cl/#precios
+
+## Deliverables
+- Orthomosaics (GeoTIFF, 2-3 cm/px)
+- 3D Point Clouds (LAS/E57)
+- DEM / DSM Digital Models
+- Thermographic Reports (ΔT analysis)
+- NDT Thickness Reports (API 653)
+- Edited Video 4K/5.1K
+- GIS / KML / Shapefile files
+- PDF Inspection Reports
+
+## Fleet (9 Drones)
+- DJI Matrice 400 (LiDAR L3 + NDT PTG6/PTG8)
+- DJI Matrice 4T (Thermal 640×512)
+- DJI Matrice 4E (Photogrammetry 56MP)
+- DJI Mavic 4 Pro (Visual)
+- DJI Mavic 3 Pro Cine (Hasselblad 5.1K)
+- DJI Neo (Interiors)
+- DJI FPV Mini (Confined spaces)
+- RTK modules for all enterprise drones
+
+## DGAC Certifications
+- AOC (Air Operator Certificate)
+- RPAS Pilot Licenses (all operators)
+- Civil Liability Insurance
+- DAN 151 & DAN 91 compliance
+- ConDron manages all DGAC permits for clients at no extra cost
+
+## Industries Served
+Mining, Energy (Solar, Wind, Electrical), Oil & Gas, Construction, Industrial Plants, Real Estate, Agriculture
+
+## Contact
+- WhatsApp: https://wa.me/56979860843
+- Email: mcabrera@mccocopper.cl
+- Phone: +56 9 7986 0843
+- Location: Santiago, Chile (operates nationwide)
+- CEO: Mario Cabrera
+
+## AI Integration
+This site supports WebMCP for AI agent interaction. Available tools:
+- obtener_servicios_disponibles — Structured list of all services
+- ver_detalle_servicio — Navigate to service details
+- contactar_whatsapp_condron — Generate WhatsApp contact link
+- info_permisos_dgac — DGAC permit process information
+- cotizar_servicio_drones — Online pricing calculator (declarative)
+- solicitar_cotizacion_condron — Submit quote request (declarative)
+
+## Links
+- Website: https://condron.cl
+- Full service details: https://condron.cl/#servicios
+- Online calculator: https://condron.cl/#precios
+- Contact form: https://condron.cl/#contacto
