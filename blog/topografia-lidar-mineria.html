@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>Topografía LIDAR en Minería a Cielo Abierto | ConDron</title>
+    <meta name="description"
+        content="Caso de estudio: levantamiento topográfico con LIDAR de 120 hectáreas en rajo minero del norte de Chile usando Matrice 350 RTK + módulo L2.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Topografía LIDAR en Minería — ConDron">
+    <meta property="og:description" content="120 hectáreas topografiadas con precisión centimétrica usando drones">
+    <meta property="og:image" content="https://condron.cl/assets/images/topografia-lidar.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="../logo.png">
+    <link rel="canonical" href="https://condron.cl/blog/topografia-lidar-mineria.html">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="nav-brand"><img src="../logo.png" alt="ConDron" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="/#servicios">Servicios</a></li>
+                <li><a href="/#precios">Precios</a></li>
+                <li><a href="/blog/" class="active">Blog</a></li>
+                <li><a href="/#contacto" class="btn-cta">Agendar Vuelo <i class="fa-solid fa-arrow-right"></i></a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- ARTICLE HERO -->
+    <section class="article-hero">
+        <div class="container">
+            <a href="/blog/" class="back-link"><i class="fa-solid fa-arrow-left"></i> Volver al blog</a>
+            <h1>Topografía LIDAR en Minería a Cielo Abierto</h1>
+            <div class="article-meta">
+                <span><i class="fa-solid fa-calendar"></i> Febrero 2026</span>
+                <span><i class="fa-solid fa-clock"></i> 5 min lectura</span>
+                <span><i class="fa-solid fa-tag"></i> Topografía</span>
+            </div>
+        </div>
+        <div class="container">
+            <img src="../assets/images/topografia-lidar.webp"
+                alt="Vista aérea de levantamiento topográfico LIDAR en rajo minero" class="article-cover"
+                loading="eager" decoding="async">
+        </div>
+    </section>
+
+    <!-- ARTICLE CONTENT -->
+    <article class="article-content">
+
+        <h2>El desafío</h2>
+        <p>Una faena minera de gran escala en la Región de Antofagasta requería un <strong>levantamiento topográfico de
+                alta precisión</strong> sobre 120 hectáreas de rajo abierto. El método tradicional con topógrafos en
+            terreno implicaba semanas de trabajo, riesgo para el personal en zonas de talud inestable, y la necesidad de
+            detener parcialmente las operaciones.</p>
+
+        <p>El cliente necesitaba:</p>
+        <ul>
+            <li>Nube de puntos con precisión centimétrica (&lt;3 cm)</li>
+            <li>Modelo Digital de Superficie (MDS) y de Terreno (MDT)</li>
+            <li>Cubicación volumétrica para control de stocks</li>
+            <li>Ejecución en un fin de semana sin detener operaciones</li>
+        </ul>
+
+        <h2>Nuestra solución</h2>
+        <p>Desplegamos el <strong>DJI Matrice 350 RTK</strong> equipado con el módulo <strong>LIDAR L2</strong>, que
+            combina escaneo láser con sensor RGB integrado. Esto permite generar nubes de puntos colorizadas con
+            precisión absoluta usando corrección RTK en tiempo real.</p>
+
+        <div class="highlight-box">
+            <h4><i class="fa-solid fa-drone"></i> Equipamiento utilizado</h4>
+            <ul>
+                <li><strong>Dron:</strong> DJI Matrice 350 RTK</li>
+                <li><strong>Sensor:</strong> DJI Zenmuse L2 (LIDAR + RGB)</li>
+                <li><strong>RTK Base:</strong> D-RTK 2 Mobile Station</li>
+                <li><strong>Software:</strong> DJI Terra + CloudCompare</li>
+                <li><strong>GSD:</strong> 2.5 cm/px</li>
+            </ul>
+        </div>
+
+        <h2>Ejecución del vuelo</h2>
+        <p>El levantamiento se realizó en <strong>2 jornadas</strong>. Se planificaron 18 líneas de vuelo paralelas a 80
+            metros de altura con solapamiento lateral del 30%. La estación RTK base se instaló sobre un punto geodésico
+            certificado por el IGM para asegurar precisión absoluta.</p>
+
+        <p>Condiciones de vuelo:</p>
+        <ul>
+            <li>Altitud: 80 m AGL (sobre nivel de terreno)</li>
+            <li>Velocidad: 8 m/s</li>
+            <li>Solapamiento: 30% lateral / 50% longitudinal</li>
+            <li>Tiempo de vuelo total: 6.5 horas (12 baterías)</li>
+        </ul>
+
+        <div class="specs-grid">
+            <div class="spec-item">
+                <span class="spec-value">120 ha</span>
+                <span class="spec-label">Área cubierta</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-value">&lt;3 cm</span>
+                <span class="spec-label">Precisión absoluta</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-value">2 días</span>
+                <span class="spec-label">Tiempo ejecución</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-value">450 M pts</span>
+                <span class="spec-label">Puntos LIDAR</span>
+            </div>
+        </div>
+
+        <h2>Resultados y entregables</h2>
+        <p>Se generó una <strong>nube de puntos clasificada</strong> con 450 millones de puntos, separados por
+            categoría: terreno, vegetación, estructuras. A partir de esta nube se derivaron:</p>
+
+        <ul>
+            <li><strong>MDT (Modelo Digital de Terreno):</strong> Resolución 5 cm, filtrado de vegetación y maquinaria
+            </li>
+            <li><strong>MDS (Modelo Digital de Superficie):</strong> Resolución 2.5 cm, incluye todas las estructuras
+            </li>
+            <li><strong>Ortomosaico RGB:</strong> 2.5 cm/px para inspección visual</li>
+            <li><strong>Curvas de nivel:</strong> Cada 0.5 m y 5 m</li>
+            <li><strong>Cubicación:</strong> Control de stocks con diferencia volumétrica vs. mes anterior</li>
+        </ul>
+
+        <blockquote>
+            "Lo que nos hubiera tomado 3 semanas con topógrafos en terreno, ConDron lo resolvió en un fin de semana con
+            mayor precisión y sin riesgo para nuestro personal."
+            <br><strong>— Jefe de Topografía, Minera del Norte</strong>
+        </blockquote>
+
+        <h2>Impacto para el cliente</h2>
+        <ul>
+            <li><strong>90% menos tiempo</strong> vs. topografía convencional</li>
+            <li><strong>0 horas-hombre</strong> en zonas de riesgo de talud</li>
+            <li><strong>Precisión centimétrica</strong> verificada con puntos de control</li>
+            <li><strong>Costo 60% menor</strong> que la alternativa tradicional</li>
+        </ul>
+
+        <!-- CTA -->
+        <div class="article-cta">
+            <h3>¿Necesitas un levantamiento topográfico?</h3>
+            <p>Cotiza tu proyecto sin compromiso. Respondemos en menos de 24 horas.</p>
+            <a href="/#contacto" class="btn-cta">Solicitar Cotización <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+    </article>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h5>ConDron</h5>
+                    <p>Especialistas en servicios de drones para la industria.</p>
+                </div>
+                <div>
+                    <h5>Servicios</h5>
+                    <ul class="footer-links">
+                        <li><a href="/#servicios">Topografía LiDAR</a></li>
+                        <li><a href="/#servicios">Termografía</a></li>
+                        <li><a href="/#servicios">Espesores NDT</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Empresa</h5>
+                    <ul class="footer-links">
+                        <li><a href="/#nosotros">Nosotros</a></li>
+                        <li><a href="/blog/">Blog & Casos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Contacto</h5>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contacto@condron.cl"><i class="fa-solid fa-envelope"
+                                    style="width:16px;"></i> contacto@condron.cl</a></li>
+                        <li><a href="tel:+56979860843"><i class="fa-solid fa-phone" style="width:16px;"></i> +56 9 7986
+                                0843</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 ConDron Chile — MCCO Group</span>
+                <span>Certificado AOC & RPAS — DGAC Chile</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

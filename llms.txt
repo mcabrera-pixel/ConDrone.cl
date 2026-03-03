@@ -1,6 +1,6 @@
 # ConDron Chile — Servicios Profesionales de Drones
 # URL: https://condron.cl
-# Contact: +56 9 7986 0843 | mcabrera@mccocopper.cl
+# Contact: +56 9 7986 0843 | contacto@condron.cl
 
 ## About
 ConDron is a professional drone services company based in Santiago, Chile, operating nationwide. We are DGAC (Dirección General de Aeronáutica Civil) certified with AOC & RPAS licenses under DAN 151 and DAN 91 regulations. Part of MCCO Group.
@@ -54,7 +54,7 @@ Mining, Energy (Solar, Wind, Electrical), Oil & Gas, Construction, Industrial Pl
 
 ## Contact
 - WhatsApp: https://wa.me/56979860843
-- Email: mcabrera@mccocopper.cl
+- Email: contacto@condron.cl
 - Phone: +56 9 7986 0843
 - Location: Santiago, Chile (operates nationwide)
 - CEO: Mario Cabrera
@@ -73,3 +73,9 @@ This site supports WebMCP for AI agent interaction. Available tools:
 - Full service details: https://condron.cl/#servicios
 - Online calculator: https://condron.cl/#precios
 - Contact form: https://condron.cl/#contacto
+- Blog & Case Studies: https://condron.cl/blog/
+
+## Case Studies
+- Topography LiDAR in Open-Pit Mining: https://condron.cl/blog/topografia-lidar-mineria.html
+- Thermographic Solar Plant Inspection: https://condron.cl/blog/inspeccion-termografica-solar.html
+- API 653 Tank Thickness Measurement: https://condron.cl/blog/medicion-espesores-estanques.html

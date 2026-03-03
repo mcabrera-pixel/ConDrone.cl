@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>Inspección Termográfica en Planta Solar | ConDron</title>
+    <meta name="description"
+        content="Caso de estudio: detección de 47 hotspots en planta solar de 5 MW usando dron Matrice 4T con cámara termográfica radiométrica.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Inspección Termográfica Solar — ConDron">
+    <meta property="og:description" content="Detección de hotspots en planta solar de 5 MW con drones">
+    <meta property="og:image" content="https://condron.cl/assets/images/termografia-inspeccion.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="../logo.png">
+    <link rel="canonical" href="https://condron.cl/blog/inspeccion-termografica-solar.html">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="nav-brand"><img src="../logo.png" alt="ConDron" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="/#servicios">Servicios</a></li>
+                <li><a href="/#precios">Precios</a></li>
+                <li><a href="/blog/" class="active">Blog</a></li>
+                <li><a href="/#contacto" class="btn-cta">Agendar Vuelo <i class="fa-solid fa-arrow-right"></i></a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- ARTICLE HERO -->
+    <section class="article-hero">
+        <div class="container">
+            <a href="/blog/" class="back-link"><i class="fa-solid fa-arrow-left"></i> Volver al blog</a>
+            <h1>Inspección Termográfica en Planta Solar Fotovoltaica</h1>
+            <div class="article-meta">
+                <span><i class="fa-solid fa-calendar"></i> Enero 2026</span>
+                <span><i class="fa-solid fa-clock"></i> 4 min lectura</span>
+                <span><i class="fa-solid fa-tag"></i> Termografía</span>
+            </div>
+        </div>
+        <div class="container">
+            <img src="../assets/images/termografia-inspeccion.webp"
+                alt="Inspección termográfica de paneles solares con dron profesional" class="article-cover"
+                loading="eager" decoding="async">
+        </div>
+    </section>
+
+    <!-- ARTICLE CONTENT -->
+    <article class="article-content">
+
+        <h2>El desafío</h2>
+        <p>Una planta solar fotovoltaica de <strong>5 MW en la Región de Atacama</strong> reportaba una caída del 8% en
+            generación durante los últimos 3 meses. El operador sospechaba de módulos defectuosos pero inspeccionar los
+            <strong>15,000 paneles</strong> manualmente era inviable en tiempo y costo.</p>
+
+        <p>Requisitos del cliente:</p>
+        <ul>
+            <li>Inspeccionar toda la planta en máximo 2 días</li>
+            <li>Identificar paneles con anomalías térmicas (hotspots, diodos bypass)</li>
+            <li>Informe con ubicación georeferenciada de cada defecto</li>
+            <li>No interferir con la operación normal de la planta</li>
+        </ul>
+
+        <h2>Nuestra solución</h2>
+        <p>Utilizamos el <strong>DJI Matrice 4T</strong> (Thermal) equipado con cámara termográfica radiométrica de
+            640×512 px y sensor visual RGB de 48 MP. Los vuelos se programaron entre las 11:00 y 14:00 hrs para
+            maximizar la irradiancia solar y asegurar contraste térmico óptimo.</p>
+
+        <div class="highlight-box">
+            <h4><i class="fa-solid fa-temperature-high"></i> Equipamiento utilizado</h4>
+            <ul>
+                <li><strong>Dron:</strong> DJI Matrice 4T</li>
+                <li><strong>Sensor térmico:</strong> 640×512 px, sensibilidad &lt;50 mK</li>
+                <li><strong>Sensor RGB:</strong> 48 MP, 1/1.32" CMOS</li>
+                <li><strong>Software:</strong> DJI Thermal Analysis + QGIS</li>
+                <li><strong>Rango detección:</strong> −20°C a 150°C</li>
+            </ul>
+        </div>
+
+        <h2>Metodología de inspección</h2>
+        <p>Se ejecutaron <strong>vuelos programados en cuadrícula</strong> sobre los 12 strings de la planta. La altitud
+            de vuelo se fijó en 30 metros para lograr una resolución térmica de 3.2 cm/px, suficiente para detectar
+            anomalías a nivel de celda individual.</p>
+
+        <p>Protocolo de vuelo:</p>
+        <ul>
+            <li>Altitud: 30 m AGL</li>
+            <li>Velocidad: 5 m/s</li>
+            <li>Ángulo de cámara: 90° (nadir)</li>
+            <li>Solapamiento: 60% lateral / 70% longitudinal</li>
+            <li>Horario: 11:00 – 14:00 hrs (máxima irradiancia)</li>
+        </ul>
+
+        <div class="specs-grid">
+            <div class="spec-item">
+                <span class="spec-value">15,000</span>
+                <span class="spec-label">Paneles inspeccionados</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-value">47</span>
+                <span class="spec-label">Hotspots detectados</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-value">12</span>
+                <span class="spec-label">Módulos a reemplazar</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-value">1.5 días</span>
+                <span class="spec-label">Tiempo ejecución</span>
+            </div>
+        </div>
+
+        <h2>Hallazgos</h2>
+        <p>El análisis térmico reveló <strong>47 anomalías</strong> clasificadas por severidad:</p>
+
+        <ul>
+            <li><strong>Hotspots de celda (32):</strong> Celdas individuales con ΔT &gt;20°C respecto al promedio →
+                posible microfisura o degradación PID</li>
+            <li><strong>Diodos bypass activos (8):</strong> Strings completos cortocircuitados, visible como 1/3 del
+                módulo significativamente más caliente</li>
+            <li><strong>Conexiones defectuosas (5):</strong> Puntos de conexión entre módulos con temperatura anormal
+            </li>
+            <li><strong>Delaminación (2):</strong> Separación de capas del módulo visible en patrón térmico irregular
+            </li>
+        </ul>
+
+        <blockquote>
+            "ConDron detectó problemas que nuestro equipo de mantenimiento no habría encontrado hasta la siguiente
+            revisión programada en 6 meses. Corregir esos 12 módulos nos recuperó un 5% de generación inmediatamente."
+            <br><strong>— Gerente de O&M, Planta Solar Atacama</strong>
+        </blockquote>
+
+        <h2>Impacto para el cliente</h2>
+        <ul>
+            <li><strong>+5% generación</strong> recuperada tras corregir defectos</li>
+            <li><strong>15,000 paneles</strong> inspeccionados en 1.5 días (vs. 3+ semanas manual)</li>
+            <li><strong>ROI inmediato:</strong> inversión recuperada en 45 días con la energía adicional generada</li>
+            <li><strong>Base de datos georeferenciada</strong> para tracking de degradación a futuro</li>
+        </ul>
+
+        <!-- CTA -->
+        <div class="article-cta">
+            <h3>¿Necesitas inspección termográfica?</h3>
+            <p>Detectamos defectos invisibles al ojo humano. Cotiza sin compromiso.</p>
+            <a href="/#contacto" class="btn-cta">Solicitar Cotización <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+    </article>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h5>ConDron</h5>
+                    <p>Especialistas en servicios de drones para la industria.</p>
+                </div>
+                <div>
+                    <h5>Servicios</h5>
+                    <ul class="footer-links">
+                        <li><a href="/#servicios">Topografía LiDAR</a></li>
+                        <li><a href="/#servicios">Termografía</a></li>
+                        <li><a href="/#servicios">Espesores NDT</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Empresa</h5>
+                    <ul class="footer-links">
+                        <li><a href="/#nosotros">Nosotros</a></li>
+                        <li><a href="/blog/">Blog & Casos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Contacto</h5>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contacto@condron.cl"><i class="fa-solid fa-envelope"
+                                    style="width:16px;"></i> contacto@condron.cl</a></li>
+                        <li><a href="tel:+56979860843"><i class="fa-solid fa-phone" style="width:16px;"></i> +56 9 7986
+                                0843</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 ConDron Chile — MCCO Group</span>
+                <span>Certificado AOC & RPAS — DGAC Chile</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
