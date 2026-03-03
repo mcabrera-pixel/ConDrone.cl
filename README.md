@@ -123,7 +123,7 @@ Cada artículo incluye:
 
 - **Empresa**: MCCO Copper / INGPROTEC
 - **Proyecto**: ConDrone.cl
-- **Email**: contacto@condrone.cl
+- **Email**: contacto@condron.cl
 
 ---
 
