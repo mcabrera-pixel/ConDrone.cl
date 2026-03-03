@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>LiDAR vs Fotogrametría con Drones | Guía Comparativa Chile 2026</title>
+    <meta name="description"
+        content="Descubre cuándo usar LiDAR o Fotogrametría en tus proyectos. Comparativa técnica para minería, forestal y construcción. Guía de expertos ConDron.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="LiDAR vs Fotogrametría — ConDron Chile">
+    <meta property="og:description"
+        content="Guía comparativa: cuándo usar LiDAR y cuándo fotogrametría en proyectos de drones">
+    <meta property="og:image" content="https://condron.cl/assets/images/blog-lidar-vs-fotogrametria.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="../logo.png">
+    <link rel="canonical" href="https://condron.cl/blog/lidar-vs-fotogrametria.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "LiDAR vs Fotogrametría con Drones: ¿Cuál usar en cada proyecto?",
+      "image": "https://condron.cl/assets/images/blog-lidar-vs-fotogrametria.webp",
+      "author": {"@type": "Organization", "name": "ConDron Chile"},
+      "publisher": {"@type": "Organization", "name": "ConDron Chile", "logo": {"@type": "ImageObject", "url": "https://condron.cl/logo.png"}},
+      "datePublished": "2026-03-03",
+      "description": "Guía comparativa técnica entre LiDAR y Fotogrametría para proyectos con drones en Chile."
+    }
+    </script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="nav-brand"><img src="../logo.png" alt="ConDron" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="/#servicios">Servicios</a></li>
+                <li><a href="/#precios">Precios</a></li>
+                <li><a href="/blog/" class="active">Blog</a></li>
+                <li><a href="/#contacto" class="btn-cta">Agendar Vuelo <i class="fa-solid fa-arrow-right"></i></a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- ARTICLE HERO -->
+    <section class="article-hero">
+        <div class="container">
+            <a href="/blog/" class="back-link"><i class="fa-solid fa-arrow-left"></i> Volver al blog</a>
+            <h1>LiDAR vs Fotogrametría: ¿Cuál usar en cada proyecto?</h1>
+            <div class="article-meta">
+                <span><i class="fa-solid fa-calendar"></i> Marzo 2026</span>
+                <span><i class="fa-solid fa-clock"></i> 7 min lectura</span>
+                <span><i class="fa-solid fa-tag"></i> Topografía</span>
+            </div>
+        </div>
+        <div class="container">
+            <img src="../assets/images/blog-lidar-vs-fotogrametria.webp"
+                alt="Comparativa LiDAR vs Fotogrametría en levantamientos con drones" class="article-cover"
+                loading="eager" decoding="async">
+        </div>
+    </section>
+
+    <!-- ARTICLE CONTENT -->
+    <article class="article-content">
+
+        <h2>Introducción</h2>
+        <p>Una de las preguntas más frecuentes que recibimos en ConDron es: <em>«¿Qué tecnología me conviene más, LiDAR
+                o Fotogrametría?»</em>. La respuesta, como suele pasar en ingeniería, es: <strong>depende</strong>.</p>
+        <p>Ambas tecnologías generan modelos 3D del terreno, pero funcionan de manera completamente diferente y tienen
+            aplicaciones óptimas distintas. En este artículo te explicamos las diferencias técnicas y te ayudamos a
+            elegir la mejor opción para tu proyecto.</p>
+
+        <h2>¿Qué es la Fotogrametría?</h2>
+        <p>La fotogrametría utiliza <strong>fotografías superpuestas</strong> tomadas desde diferentes ángulos para
+            reconstruir un modelo 3D mediante algoritmos de visión computacional.</p>
+
+        <div class="highlight-box">
+            <h4><i class="fa-solid fa-camera"></i> Cómo funciona</h4>
+            <ul>
+                <li>El dron vuela en un patrón de grilla tomando fotos con 70-80% de traslape</li>
+                <li>Un software procesa las imágenes identificando puntos en común</li>
+                <li>Se genera una nube de puntos y un modelo 3D texturizado</li>
+            </ul>
+        </div>
+
+        <h3>Ventajas de la Fotogrametría</h3>
+        <ul>
+            <li><strong>Costo menor:</strong> Las cámaras RGB son más económicas que sensores LiDAR</li>
+            <li><strong>Textura visual:</strong> Genera modelos con colores reales (ortomosaicos)</li>
+            <li><strong>Alta resolución:</strong> Puede alcanzar precisiones de 1-2 cm/pixel</li>
+            <li><strong>Ideal para:</strong> Minería a cielo abierto, construcción, volumetría de stockpiles</li>
+        </ul>
+
+        <h3>Limitaciones</h3>
+        <ul>
+            <li><strong>No penetra vegetación:</strong> Solo «ve» la superficie visible</li>
+            <li><strong>Depende de la luz:</strong> Requiere buenas condiciones de iluminación</li>
+            <li><strong>Superficies reflectantes:</strong> Problemas con agua, vidrio o metal pulido</li>
+        </ul>
+
+        <h2>¿Qué es el LiDAR?</h2>
+        <p>LiDAR (Light Detection and Ranging) utiliza <strong>pulsos láser</strong> que se emiten y rebotan en las
+            superficies, midiendo el tiempo de retorno para calcular distancias con extrema precisión.</p>
+
+        <div class="highlight-box">
+            <h4><i class="fa-solid fa-satellite-dish"></i> Cómo funciona</h4>
+            <ul>
+                <li>El sensor emite miles de pulsos láser por segundo</li>
+                <li>Cada pulso puede tener múltiples retornos (vegetación, suelo, estructuras)</li>
+                <li>Se genera una nube de puntos 3D con coordenadas XYZ precisas</li>
+            </ul>
+        </div>
+
+        <h3>Ventajas del LiDAR</h3>
+        <ul>
+            <li><strong>Penetra vegetación:</strong> Los pulsos atraviesan hojas y ramas hasta el suelo</li>
+            <li><strong>Independiente de luz:</strong> Funciona en cualquier condición lumínica</li>
+            <li><strong>Múltiples retornos:</strong> Captura diferentes niveles (dosel, sotobosque, suelo)</li>
+            <li><strong>Alta precisión vertical:</strong> ±2-5 cm en elevación</li>
+        </ul>
+
+        <h2>Comparativa Técnica</h2>
+
+        <div class="specs-grid">
+            <div class="spec-item">
+                <span class="spec-value">1-3 cm</span>
+                <span class="spec-label">Precisión Foto</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-value">2-5 cm</span>
+                <span class="spec-label">Precisión LiDAR</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-value">$</span>
+                <span class="spec-label">Costo Foto</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-value">$$$</span>
+                <span class="spec-label">Costo LiDAR</span>
+            </div>
+        </div>
+
+        <h2>¿Cuál elegir según tu industria?</h2>
+
+        <h3>Minería</h3>
+        <ul>
+            <li><strong>Stockpiles y volumetría:</strong> Fotogrametría (superficie visible, necesitas textura)</li>
+            <li><strong>Geotecnia de taludes:</strong> Fotogrametría + LiDAR (combinar para mayor detalle)</li>
+            <li><strong>Exploración bajo vegetación:</strong> LiDAR (obligatorio)</li>
+        </ul>
+
+        <h3>Forestal</h3>
+        <ul>
+            <li><strong>Inventario de bosques:</strong> LiDAR (indispensable para ver bajo el dosel)</li>
+            <li><strong>Cálculo de biomasa:</strong> LiDAR (múltiples retornos dan estructura del bosque)</li>
+            <li><strong>Planificación de caminos:</strong> LiDAR (topografía real del suelo)</li>
+        </ul>
+
+        <h3>Construcción</h3>
+        <ul>
+            <li><strong>Seguimiento de obras:</strong> Fotogrametría (necesitas ver colores y detalles)</li>
+            <li><strong>Cubicación de excavaciones:</strong> Fotogrametría (superficie expuesta)</li>
+            <li><strong>Levantamiento As-Built:</strong> Fotogrametría + LiDAR (máxima precisión)</li>
+        </ul>
+
+        <h3>Energía</h3>
+        <ul>
+            <li><strong>Control de faja (vegetación):</strong> LiDAR (detecta árboles bajo líneas)</li>
+            <li><strong>Inspección de paneles solares:</strong> Fotogrametría + Termografía</li>
+            <li><strong>Topografía para proyectos:</strong> LiDAR si hay vegetación, fotogrametría si no</li>
+        </ul>
+
+        <h2>La mejor opción: Combinar ambas tecnologías</h2>
+        <p>En ConDron, nuestra recomendación para proyectos críticos es <strong>combinar LiDAR y
+                Fotogrametría</strong>. Con equipos como el DJI Zenmuse L3, capturamos ambos tipos de datos en un solo
+            vuelo: LiDAR para la geometría precisa y Fotogrametría para la textura visual.</p>
+        <p>El resultado es un <strong>Gemelo Digital</strong> completo que tiene lo mejor de ambos mundos.</p>
+
+        <blockquote>
+            "No existe una tecnología «mejor» en absoluto. La elección correcta depende de tu terreno, tu presupuesto y
+            tus entregables. En ConDron te asesoramos para elegir la combinación óptima."
+            <br><strong>— Equipo Técnico, ConDron</strong>
+        </blockquote>
+
+        <!-- CTA -->
+        <div class="article-cta">
+            <h3>¿Tienes un proyecto y no sabes qué tecnología usar?</h3>
+            <p>Te asesoramos gratis. Cotiza tu proyecto sin compromiso.</p>
+            <a href="/#contacto" class="btn-cta">Solicitar Asesoría <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+    </article>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h5>ConDron</h5>
+                    <p>Especialistas en servicios de drones para la industria.</p>
+                </div>
+                <div>
+                    <h5>Servicios</h5>
+                    <ul class="footer-links">
+                        <li><a href="/#servicios">Topografía LiDAR</a></li>
+                        <li><a href="/#servicios">Termografía</a></li>
+                        <li><a href="/#servicios">Espesores NDT</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Empresa</h5>
+                    <ul class="footer-links">
+                        <li><a href="/#nosotros">Nosotros</a></li>
+                        <li><a href="/blog/">Blog & Casos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Contacto</h5>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contacto@condron.cl"><i class="fa-solid fa-envelope"
+                                    style="width:16px;"></i> contacto@condron.cl</a></li>
+                        <li><a href="tel:+56979860843"><i class="fa-solid fa-phone" style="width:16px;"></i> +56 9 7986
+                                0843</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 ConDron Chile — MCCO Group</span>
+                <span>Certificado AOC & RPAS — DGAC Chile</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -79,3 +79,11 @@ This site supports WebMCP for AI agent interaction. Available tools:
 - Topography LiDAR in Open-Pit Mining: https://condron.cl/blog/topografia-lidar-mineria.html
 - Thermographic Solar Plant Inspection: https://condron.cl/blog/inspeccion-termografica-solar.html
 - API 653 Tank Thickness Measurement: https://condron.cl/blog/medicion-espesores-estanques.html
+
+## Technical Articles
+- LiDAR vs Photogrammetry Comparison Guide: https://condron.cl/blog/lidar-vs-fotogrametria.html
+- Ultrasonic Thickness Measurement with Drones (No Scaffolding): https://condron.cl/blog/medicion-espesores-drones-ut.html
+- DGAC Drone Regulations Chile 2026 Complete Guide: https://condron.cl/blog/normativa-dgac-drones-chile.html
+- Solar Panel Thermographic Inspection (Hotspot Detection): https://condron.cl/blog/termografia-paneles-solares.html
+- Industrial Digital Twins (3D Plant Models): https://condron.cl/blog/gemelos-digitales-industriales.html
+- Drone Fumigation vs Traditional Methods (Cost Analysis): https://condron.cl/blog/fumigacion-drones-vs-tradicional.html

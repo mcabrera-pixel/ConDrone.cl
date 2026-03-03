@@ -288,6 +288,16 @@ em {
     color: #00796B;
 }
 
+.tag-sky {
+    background: #E3F2FD;
+    color: #1565C0;
+}
+
+.tag-green {
+    background: #E8F5E9;
+    color: #2E7D32;
+}
+
 .blog-date {
     font-size: 0.78rem;
     color: var(--text-light);
