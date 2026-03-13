@@ -1149,7 +1149,7 @@ img {
 
 .footer-links a {
   font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .footer-links a:hover {
@@ -1213,6 +1213,127 @@ img {
 .whatsapp-float:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+}
+
+/* ---------- SKIP LINK ---------- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 10000;
+  padding: 12px 24px;
+  background: var(--cta);
+  color: var(--white);
+  border-radius: 0 0 12px 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+  color: var(--white);
+}
+
+/* ---------- FOCUS VISIBLE ---------- */
+*:focus-visible {
+  outline: 2px solid var(--cta);
+  outline-offset: 2px;
+}
+
+.form-group input:focus-visible,
+.form-group select:focus-visible,
+.form-group textarea:focus-visible {
+  outline: none;
+  border-color: var(--cta);
+  box-shadow: 0 0 0 4px var(--cta-light);
+}
+
+/* ---------- FAQ ---------- */
+.faq {
+  background: var(--bg-main);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: var(--transition);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.faq-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.faq-item[open] {
+  border-color: var(--cta);
+  box-shadow: var(--shadow-md);
+}
+
+.faq-question {
+  padding: 20px 28px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: var(--transition);
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--cta);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] .faq-question::after {
+  content: '\2212';
+  transform: rotate(180deg);
+}
+
+.faq-item[open] .faq-question {
+  color: var(--cta);
+}
+
+.faq-answer {
+  padding: 0 28px 24px;
+}
+
+.faq-answer p {
+  font-size: 0.92rem;
+  color: var(--text-mid);
+  line-height: 1.8;
+}
+
+.faq-answer a {
+  color: var(--cta);
+  font-weight: 600;
+}
+
+.faq-answer a:hover {
+  text-decoration: underline;
 }
 
 /* ---------- RESPONSIVE ---------- */
